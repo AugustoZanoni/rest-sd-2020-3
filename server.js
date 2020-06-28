@@ -26,6 +26,10 @@ let cardapio = {
 
 app.post("/novoItem", (req, res) => {
   const { categoria, item, preco } = req.body;
+  if (cardapio[`${categoria}`]=== undefined){
+    console.log('Uma nova categoria foi adicionada')
+    cardapio[`${categoria}`] = []
+  }
   let posicao = cardapio[`${categoria}`].length + 1
   let novoItem = {
     id: posicao, item: item, preco: preco
@@ -61,6 +65,10 @@ app.get("/cardapio/:categoria", (req, res) => {
 
 app.get("/cardapio", (req, res) => {
   res.send(JSON.stringify(cardapio));
+});
+
+app.get("/carrinho", (req, res) => {
+  res.send(JSON.stringify(carrinho));
 });
 
 app.delete("/deleteItem", (req, res) => {
