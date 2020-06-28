@@ -1,27 +1,20 @@
 {
-  "name": "rest-sd-2020-3",
+  "name": "api_rest_ifood",
   "version": "1.0.0",
-  "description": "Implementação de serviço RESTful",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rafaelfl/rest-sd-2020-3.git"
-  },
-  "author": "Rafael Fernandes Lopes",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rafaelfl/rest-sd-2020-3/issues"
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
   },
-  "homepage": "https://github.com/rafaelfl/rest-sd-2020-3#readme",
   "devDependencies": {
     "nodemon": "^2.0.4"
-  },
-  "dependencies": {
-    "axios": "^0.19.2",
-    "express": "^4.17.1"
   }
 }
