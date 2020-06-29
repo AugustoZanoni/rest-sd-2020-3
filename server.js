@@ -74,6 +74,7 @@ app.get("/carrinho", (req, res) => {
 app.delete("/deleteItem", (req, res) => {
   const { categoria, id } = req.body;
   //delete cardapio[`${categoria}`][`${id}`]
+  
   cardapio[`${categoria}`].splice(cardapio[`${categoria}`].indexOf(`id: ${id}`), 1);
   console.log(cardapio);
   res.send(JSON.stringify(cardapio));
